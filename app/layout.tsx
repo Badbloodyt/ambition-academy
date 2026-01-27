@@ -13,27 +13,25 @@ export default function RootLayout({
       <body style={{ margin: 0, fontFamily: "Arial, sans-serif" }}>
         {/* Navigation Bar */}
         <nav
-          style={{
-            padding: "15px 30px",
-            backgroundColor: "#1e293b",
-            color: "white",
-            display: "flex",
-            gap: "20px",
-          }}
-        >
-          <a href="/" style={{ color: "white", textDecoration: "none" }}>
-            Home
-          </a>
-          <a href="/about" style={{ color: "white", textDecoration: "none" }}>
-            About
-          </a>
-          <a href="/courses" style={{ color: "white", textDecoration: "none" }}>
-            Courses
-          </a>
-          <a href="/contact" style={{ color: "white", textDecoration: "none" }}>
-            Contact
-          </a>
-        </nav>
+  style={{
+    padding: "16px 40px",
+    backgroundColor: "#0f172a",
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+  }}
+>
+  <div style={{ color: "white", fontSize: "20px", fontWeight: "bold" }}>
+    Ambition Academy
+  </div>
+
+  <div style={{ display: "flex", gap: "20px" }}>
+    <a href="/" style={navLink}>Home</a>
+    <a href="/about" style={navLink}>About</a>
+    <a href="/courses" style={navLink}>Programs</a>
+    <a href="/contact" style={navLink}>Contact</a>
+  </div>
+</nav>
 
         {/* Page Content */}
         <div style={{ padding: "30px" }}>{children}</div>
