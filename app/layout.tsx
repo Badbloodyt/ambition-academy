@@ -2,7 +2,11 @@ export const metadata = {
   title: "Ambition Academy",
   description: "Coaching Institute Website",
 };
-
+const navLink = {
+  color: "white",
+  textDecoration: "none",
+  fontSize: "16px",
+};
 export default function RootLayout({
   children,
 }: {
