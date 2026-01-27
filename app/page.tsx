@@ -1,43 +1,61 @@
 export default function Home() {
   return (
-    <main>
-      <h1 style={{ fontSize: "36px" }}>Ambition Academy</h1>
-
-      <p style={{ fontSize: "18px", maxWidth: "850px" }}>
-        Ambition Academy is a unique institute where <b>quality education</b> and
-        <b> professional sports training</b> go hand in hand. We focus on building
-        strong academics along with physical fitness, discipline, and confidence.
-      </p>
-
-      <section style={{ marginTop: "30px" }}>
-        <h2>Studies Program</h2>
-        <ul>
-          <li>Class 6–10 (All Subjects)</li>
-          <li>Class 11–12 (Commerce)</li>
-          <li>Accountancy & Economics (Special Focus)</li>
-          <li>Regular tests, doubt sessions & personal mentoring</li>
-        </ul>
+    <main style={{ maxWidth: "1100px", margin: "auto" }}>
+      {/* Hero Section */}
+      <section style={{ marginBottom: "50px" }}>
+        <h1 style={{ fontSize: "40px", marginBottom: "10px" }}>
+          Ambition Academy
+        </h1>
+        <p style={{ fontSize: "18px", color: "#334155", maxWidth: "850px" }}>
+          A place where <b>Studies</b> and <b>Sports</b> grow together. We build
+          strong academic foundations along with fitness, discipline, and
+          confidence.
+        </p>
       </section>
 
-      <section style={{ marginTop: "30px" }}>
-        <h2>Sports Program</h2>
-        <ul>
-          <li>🏏 Cricket coaching</li>
-          <li>🥋 Taekwondo training</li>
-          <li>🏸 Badminton coaching</li>
-          <li>♟️ Chess training</li>
-          <li>Fitness, discipline & tournament preparation</li>
-        </ul>
-      </section>
+      {/* Cards Section */}
+      <section
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+          gap: "25px",
+        }}
+      >
+        <div style={card}>
+          <h2>📚 Studies</h2>
+          <ul>
+            <li>Class 6–10 (All Subjects)</li>
+            <li>Class 11–12 (Commerce)</li>
+            <li>Accountancy & Economics</li>
+          </ul>
+        </div>
 
-      <section style={{ marginTop: "30px" }}>
-        <h2>Why Choose Ambition Academy?</h2>
-        <ul>
-          <li>Balanced focus on studies and sports</li>
-          <li>Experienced teachers and coaches</li>
-          <li>Personal attention to every student</li>
-        </ul>
+        <div style={card}>
+          <h2>🏆 Sports</h2>
+          <ul>
+            <li>Cricket</li>
+            <li>Taekwondo</li>
+            <li>Badminton</li>
+            <li>Chess</li>
+          </ul>
+        </div>
+
+        <div style={card}>
+          <h2>⭐ Why Choose Us</h2>
+          <ul>
+            <li>Balanced academics + sports</li>
+            <li>Experienced teachers & coaches</li>
+            <li>Personal attention</li>
+          </ul>
+        </div>
       </section>
     </main>
   );
 }
+
+const card = {
+  backgroundColor: "#f8fafc",
+  padding: "25px",
+  borderRadius: "12px",
+  boxShadow: "0 4px 10px rgba(0,0,0,0.08)",
+};
