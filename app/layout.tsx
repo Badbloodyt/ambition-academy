@@ -33,6 +33,7 @@ export default function RootLayout({
     <a href="/" style={navLink}>Home</a>
     <a href="/about" style={navLink}>About</a>
     <a href="/courses" style={navLink}>Programs</a>
+    <a href="/admission" style={navLink}>Admission</a>
     <a href="/contact" style={navLink}>Contact</a>
   </div>
 </nav>
