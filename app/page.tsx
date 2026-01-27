@@ -124,17 +124,21 @@ Phone: ${data.get("phone")}`;
   );
 }
 
-const card = {
-  backgroundColor: "#ffffff",
-  padding: "25px",
-  borderRadius: "12px",
-  boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
-};
-import { CSSProperties } from "react";
-
-const imgStyle: CSSProperties = {
+const input = {
   width: "100%",
-  height: "180px",
-  objectFit: "cover",
-  borderRadius: "10px",
+  padding: "12px",
+  marginBottom: "15px",
+  borderRadius: "6px",
+  border: "1px solid #cbd5e1",
+};
+
+const button = {
+  width: "100%",
+  padding: "12px",
+  backgroundColor: "#0f172a",
+  color: "white",
+  border: "none",
+  borderRadius: "6px",
+  fontSize: "16px",
+  cursor: "pointer",
 };
