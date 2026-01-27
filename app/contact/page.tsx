@@ -1,16 +1,10 @@
 export default function Contact() {
   return (
-    <main style={{ padding: "40px", fontFamily: "Arial" }}>
+    <main>
       <h1>Contact Us</h1>
-
-      <p>
-        📞 Phone: 7355449247 <br />
-        📧 Email: ambitionacademy@email.com
-      </p>
-
-      <p>
-        📍 Address: Ambition Academy, India
-      </p>
+      <p>📞 Phone: 7355449247</p>
+      <p>📧 Email: ambitionacademy@email.com</p>
+      <p>📍 Location: India</p>
     </main>
   );
 }
