@@ -99,25 +99,45 @@ Phone: ${data.get("phone")}`;
     }}
   >
     <img
-      src="https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d"
-      style={imgStyle}
-      alt="Cricket"
-    />
+  src="https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d"
+  style={{
+    width: "100%",
+    height: "180px",
+    objectFit: "cover",
+    borderRadius: "10px",
+  }}
+  alt="Cricket"
+/>
     <img
-      src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1"
-      style={imgStyle}
-      alt="Taekwondo"
-    />
+  src="https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d"
+  style={{
+    width: "100%",
+    height: "180px",
+    objectFit: "cover",
+    borderRadius: "10px",
+  }}
+  alt="Taekwondo"
+/>
     <img
-      src="https://images.unsplash.com/photo-1599058917212-d750089bc07e"
-      style={imgStyle}
-      alt="Badminton"
-    />
+  src="https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d"
+  style={{
+    width: "100%",
+    height: "180px",
+    objectFit: "cover",
+    borderRadius: "10px",
+  }}
+  alt="Badminton"
+/>
     <img
-      src="https://images.unsplash.com/photo-1581090700227-1e37b190418e"
-      style={imgStyle}
-      alt="Chess"
-    />
+  src="https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d"
+  style={{
+    width: "100%",
+    height: "180px",
+    objectFit: "cover",
+    borderRadius: "10px",
+  }}
+  alt="Chess"
+/>
   </div>
 </section>
     </main>
