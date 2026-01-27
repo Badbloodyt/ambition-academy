@@ -20,6 +20,64 @@ export default function Home() {
           Where <b>Studies</b> and <b>Sports</b> grow together
         </p>
       </section>
+      <section
+  style={{
+    maxWidth: "700px",
+    margin: "60px auto",
+    padding: "25px",
+    backgroundColor: "#f8fafc",
+    borderRadius: "12px",
+  }}
+>
+  <h2 style={{ textAlign: "center", marginBottom: "20px" }}>
+    Admission Enquiry
+  </h2>
+
+  <form
+    onSubmit={(e) => {
+      e.preventDefault();
+
+      const form = e.target as HTMLFormElement;
+      const data = new FormData(form);
+
+      const message = `Admission Enquiry%0A
+Name: ${data.get("name")}%0A
+Class/Age: ${data.get("class")}%0A
+Program: ${data.get("program")}%0A
+Sport: ${data.get("sport")}%0A
+Phone: ${data.get("phone")}`;
+
+      window.open(
+        `https://wa.me/917355449247?text=${message}`,
+        "_blank"
+      );
+    }}
+  >
+    <input name="name" placeholder="Student Name" required style={input} />
+    <input name="class" placeholder="Class / Age" required style={input} />
+
+    <select name="program" required style={input}>
+      <option value="">Program Interested In</option>
+      <option value="Studies">Studies</option>
+      <option value="Sports">Sports</option>
+      <option value="Both">Both</option>
+    </select>
+
+    <select name="sport" style={input}>
+      <option value="">Sport (if applicable)</option>
+      <option value="Cricket">Cricket</option>
+      <option value="Taekwondo">Taekwondo</option>
+      <option value="Badminton">Badminton</option>
+      <option value="Chess">Chess</option>
+    </select>
+
+    <input name="phone" placeholder="Phone Number" required style={input} />
+
+    <button type="submit" style={button}>
+      Send Enquiry on WhatsApp
+    </button>
+  </form>
+</section>
 
       {/* CONTENT */}
      <section
