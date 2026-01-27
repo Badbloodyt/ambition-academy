@@ -22,49 +22,46 @@ export default function Home() {
       </section>
 
       {/* CONTENT */}
-      <section
-        style={{
-          maxWidth: "1100px",
-          margin: "40px auto",
-          padding: "0 20px",
-        }}
-      >
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-            gap: "25px",
-          }}
-        >
-          <div style={card}>
-            <h2>📚 Studies</h2>
-            <ul>
-              <li>Class 6–10 (All Subjects)</li>
-              <li>Class 11–12 (Commerce)</li>
-              <li>Accountancy & Economics</li>
-            </ul>
-          </div>
+     <section
+  style={{
+    maxWidth: "1100px",
+    margin: "60px auto",
+    padding: "0 20px",
+  }}
+>
+  <h2 style={{ textAlign: "center", marginBottom: "30px" }}>
+    Our Sports Activities
+  </h2>
 
-          <div style={card}>
-            <h2>🏏 Sports</h2>
-            <ul>
-              <li>Cricket</li>
-              <li>Taekwondo</li>
-              <li>Badminton</li>
-              <li>Chess</li>
-            </ul>
-          </div>
-
-          <div style={card}>
-            <h2>⭐ Why Choose Us</h2>
-            <ul>
-              <li>Balanced focus on academics & sports</li>
-              <li>Experienced teachers and coaches</li>
-              <li>Personal attention to every student</li>
-            </ul>
-          </div>
-        </div>
-      </section>
+  <div
+    style={{
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+      gap: "20px",
+    }}
+  >
+    <img
+      src="https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d"
+      style={imgStyle}
+      alt="Cricket"
+    />
+    <img
+      src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1"
+      style={imgStyle}
+      alt="Taekwondo"
+    />
+    <img
+      src="https://images.unsplash.com/photo-1599058917212-d750089bc07e"
+      style={imgStyle}
+      alt="Badminton"
+    />
+    <img
+      src="https://images.unsplash.com/photo-1581090700227-1e37b190418e"
+      style={imgStyle}
+      alt="Chess"
+    />
+  </div>
+</section>
     </main>
   );
 }
@@ -74,4 +71,10 @@ const card = {
   padding: "25px",
   borderRadius: "12px",
   boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+};
+const imgStyle = {
+  width: "100%",
+  height: "180px",
+  objectFit: "cover",
+  borderRadius: "10px",
 };
