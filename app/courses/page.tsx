@@ -1,28 +1,33 @@
 export default function Courses() {
   return (
-    <main>
-      <h1>Our Programs</h1>
+    <main style={{ maxWidth: "900px", margin: "auto" }}>
+      <h1 style={{ marginBottom: "20px" }}>Our Programs</h1>
 
-      <section style={{ marginTop: "25px" }}>
-        <h2>Studies</h2>
+      <div style={section}>
+        <h2>Studies Program</h2>
         <ul>
-          <li>Foundation Classes (Class 6–8)</li>
-          <li>Board Preparation (Class 9–10)</li>
-          <li>Commerce Stream (Class 11–12)</li>
-          <li>Special Coaching: Accountancy & Economics</li>
+          <li>Foundation (Class 6–8)</li>
+          <li>Board Preparation (9–10)</li>
+          <li>Commerce (11–12)</li>
         </ul>
-      </section>
+      </div>
 
-      <section style={{ marginTop: "30px" }}>
-        <h2>Sports</h2>
+      <div style={section}>
+        <h2>Sports Program</h2>
         <ul>
           <li>Cricket</li>
           <li>Taekwondo</li>
           <li>Badminton</li>
           <li>Chess</li>
-          <li>Fitness training & competitions</li>
         </ul>
-      </section>
+      </div>
     </main>
   );
 }
+
+const section = {
+  backgroundColor: "#f1f5f9",
+  padding: "20px",
+  borderRadius: "10px",
+  marginBottom: "25px",
+};
