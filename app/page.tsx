@@ -1,165 +1,106 @@
 "use client";
+
 export default function Home() {
   return (
-    <main>
-      {/* HERO BANNER */}
-      <section
-        style={{
-          backgroundImage:
-            "url(https://images.unsplash.com/photo-1521412644187-c49fa049e84d)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          color: "white",
-          padding: "80px 30px",
-          textAlign: "center",
-        }}
-      >
-        <h1 style={{ fontSize: "48px", marginBottom: "10px" }}>
-          Ambition Academy
-        </h1>
-        <p style={{ fontSize: "20px", maxWidth: "800px", margin: "auto" }}>
-          Where <b>Studies</b> and <b>Sports</b> grow together
-        </p>
+    <main className="page">
+      {/* HERO */}
+      <section className="hero">
+        <div className="heroOverlay" />
+        <div className="heroInner">
+          <div className="badge">Studies • Sports • Growth</div>
+          <h1 className="heroTitle">Ambition Academy</h1>
+          <p className="heroSub">
+            Where <b>Studies</b> and <b>Sports</b> grow together
+          </p>
+
+          <div className="heroActions">
+            <a className="btn btnPrimary" href="#enquiry">
+              Admission Enquiry
+            </a>
+            <a className="btn btnGhost" href="#sports">
+              Explore Sports
+            </a>
+          </div>
+        </div>
       </section>
-      <section
-  style={{
-    maxWidth: "700px",
-    margin: "60px auto",
-    padding: "25px",
-    backgroundColor: "#f8fafc",
-    borderRadius: "12px",
-  }}
->
-  <h2 style={{ textAlign: "center", marginBottom: "20px" }}>
-    Admission Enquiry
-  </h2>
 
-  <form
-    onSubmit={(e) => {
-      e.preventDefault();
+      {/* ENQUIRY */}
+      <section id="enquiry" className="section">
+        <div className="card">
+          <h2 className="sectionTitle">Admission Enquiry</h2>
 
-      const form = e.target as HTMLFormElement;
-      const data = new FormData(form);
+          <form
+            className="form"
+            onSubmit={(e) => {
+              e.preventDefault();
 
-      const message = `Admission Enquiry%0A
+              const form = e.target as HTMLFormElement;
+              const data = new FormData(form);
+
+              const message = `Admission Enquiry%0A
 Name: ${data.get("name")}%0A
 Class/Age: ${data.get("class")}%0A
 Program: ${data.get("program")}%0A
 Sport: ${data.get("sport")}%0A
 Phone: ${data.get("phone")}`;
 
-      window.open(
-        `https://wa.me/917355449247?text=${message}`,
-        "_blank"
-      );
-    }}
-  >
-    <input name="name" placeholder="Student Name" required style={input} />
-    <input name="class" placeholder="Class / Age" required style={input} />
+              window.open(`https://wa.me/917355449247?text=${message}`, "_blank");
+            }}
+          >
+            <input name="name" placeholder="Student Name" required className="input" />
+            <input name="class" placeholder="Class / Age" required className="input" />
 
-    <select name="program" required style={input}>
-      <option value="">Program Interested In</option>
-      <option value="Studies">Studies</option>
-      <option value="Sports">Sports</option>
-      <option value="Both">Both</option>
-    </select>
+            <select name="program" required className="input">
+              <option value="">Program Interested In</option>
+              <option value="Studies">Studies</option>
+              <option value="Sports">Sports</option>
+              <option value="Both">Both</option>
+            </select>
 
-    <select name="sport" style={input}>
-      <option value="">Sport (if applicable)</option>
-      <option value="Cricket">Cricket</option>
-      <option value="Taekwondo">Taekwondo</option>
-      <option value="Badminton">Badminton</option>
-      <option value="Chess">Chess</option>
-    </select>
+            <select name="sport" className="input">
+              <option value="">Sport (if applicable)</option>
+              <option value="Cricket">Cricket</option>
+              <option value="Taekwondo">Taekwondo</option>
+              <option value="Badminton">Badminton</option>
+              <option value="Chess">Chess</option>
+            </select>
 
-    <input name="phone" placeholder="Phone Number" required style={input} />
+            <input name="phone" placeholder="Phone Number" required className="input" />
 
-    <button type="submit" style={button}>
-      Send Enquiry on WhatsApp
-    </button>
-  </form>
-</section>
+            <button type="submit" className="btn btnPrimary btnFull">
+              Send Enquiry on WhatsApp
+            </button>
+          </form>
 
-      {/* CONTENT */}
-     <section
-  style={{
-    maxWidth: "1100px",
-    margin: "60px auto",
-    padding: "0 20px",
-  }}
->
-  <h2 style={{ textAlign: "center", marginBottom: "30px" }}>
-    Our Sports Activities
-  </h2>
+          <p className="hint">
+            Tip: You can later change the WhatsApp number in one place if you want.
+          </p>
+        </div>
+      </section>
 
-  <div
-    style={{
-      display: "grid",
-      gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-      gap: "20px",
-    }}
-  >
-    <img
-  src="https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d"
-  style={{
-    width: "100%",
-    height: "180px",
-    objectFit: "cover",
-    borderRadius: "10px",
-  }}
-  alt="Cricket"
-/>
-    <img
-  src="https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d"
-  style={{
-    width: "100%",
-    height: "180px",
-    objectFit: "cover",
-    borderRadius: "10px",
-  }}
-  alt="Taekwondo"
-/>
-    <img
-  src="https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d"
-  style={{
-    width: "100%",
-    height: "180px",
-    objectFit: "cover",
-    borderRadius: "10px",
-  }}
-  alt="Badminton"
-/>
-    <img
-  src="https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d"
-  style={{
-    width: "100%",
-    height: "180px",
-    objectFit: "cover",
-    borderRadius: "10px",
-  }}
-  alt="Chess"
-/>
-  </div>
-</section>
+      {/* SPORTS */}
+      <section id="sports" className="section">
+        <h2 className="sectionTitle center">Our Sports Activities</h2>
+
+        <div className="grid">
+          <SportCard title="Cricket" img="/images/cricket.jpg" />
+          <SportCard title="Taekwondo" img="/images/taekwondo.jpg" />
+          <SportCard title="Badminton" img="/images/badminton.jpg" />
+          <SportCard title="Chess" img="/images/chess.jpg" />
+        </div>
+      </section>
     </main>
   );
 }
 
-const input = {
-  width: "100%",
-  padding: "12px",
-  marginBottom: "15px",
-  borderRadius: "6px",
-  border: "1px solid #cbd5e1",
-};
-
-const button = {
-  width: "100%",
-  padding: "12px",
-  backgroundColor: "#0f172a",
-  color: "white",
-  border: "none",
-  borderRadius: "6px",
-  fontSize: "16px",
-  cursor: "pointer",
-};
+function SportCard({ title, img }: { title: string; img: string }) {
+  return (
+    <div className="sportCard">
+      <div className="sportImg" style={{ backgroundImage: `url(${img})` }} />
+      <div className="sportMeta">
+        <div className="sportTitle">{title}</div>
+        <div className="sportDesc">Training • Discipline • Confidence</div>
+      </div>
+    </div>
+  );
+}
