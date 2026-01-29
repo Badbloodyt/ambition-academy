@@ -183,12 +183,20 @@ body{ font-family: ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial
   .heroTitle{ font-size: 38px; }
   .sportCard{ grid-column: span 12; }
 }
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 24px;              /* THIS fixes the merging */
+}
+
 .navLinks a {
-  color: rgba(255,255,255,.7);
+  color: rgba(255, 255, 255, 0.75);
   text-decoration: none;
+  font-size: 15px;
   font-weight: 500;
+  transition: color 0.2s ease;
 }
 
 .navLinks a:hover {
-  color: white;
+  color: #ffffff;
 }
