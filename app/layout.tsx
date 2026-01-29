@@ -1,3 +1,4 @@
+import "./globals.css";
 export const metadata = {
   title: "Ambition Academy",
   description: "Coaching Institute Website",
@@ -14,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body style={{ margin: 0, fontFamily: "Arial, sans-serif" }}>
+      <body>
         {/* Navigation Bar */}
         <nav
   style={{
