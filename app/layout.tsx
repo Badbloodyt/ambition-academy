@@ -1,45 +1,27 @@
 import "./globals.css";
+import type { ReactNode } from "react";
+
 export const metadata = {
   title: "Ambition Academy",
   description: "Coaching Institute Website",
 };
-const navLink = {
-  color: "white",
-  textDecoration: "none",
-  fontSize: "16px",
-};
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body>
-        {/* Navigation Bar */}
-        <nav
-  style={{
-    padding: "16px 40px",
-    backgroundColor: "#0f172a",
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-  }}
->
-  <div style={{ color: "white", fontSize: "20px", fontWeight: "bold" }}>
-    Ambition Academy
-  </div>
+        <nav className="navbar">
+          <div className="brand">Ambition Academy</div>
 
-  <div style={{ display: "flex", gap: "20px" }}>
-    <a href="/" style={navLink}>Home</a>
-    <a href="/about" style={navLink}>About</a>
-    <a href="/admission" style={navLink}>Admission</a>
-    <a href="/contact" style={navLink}>Contact</a>
-  </div>
-</nav>
+          <div className="navLinks">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/admission">Admission</a>
+            <a href="/contact">Contact</a>
+          </div>
+        </nav>
 
-        {/* Page Content */}
-        <div style={{ padding: "30px" }}>{children}</div>
+        <main className="pageContent">{children}</main>
       </body>
     </html>
   );
